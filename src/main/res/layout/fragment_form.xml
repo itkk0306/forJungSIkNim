@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:id="@+id/fragment_form"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FormFragment">
+
+    <ImageView
+        android:id="@+id/form_icon_01"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:src="@drawable/baseline_pets_black_24dp" />
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/form_view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/border_square_black_r10"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/form_icon_01"
+        app:layout_constraintVertical_bias="1.0"
+        tools:layout_editor_absoluteX="30dp" />
+
+    <TextView
+        android:id="@+id/form_complete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/border_square_black_r10"
+        android:text="저장"
+        android:textSize="25dp"
+        android:gravity="center"
+        android:layout_marginEnd="15dp"
+        app:layout_constraintBottom_toTopOf="@id/form_view"
+        app:layout_constraintRight_toRightOf="@id/form_view"/>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/form_fab_main"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="30dp"
+        android:src="@drawable/ic_create_black_24dp"
+        android:backgroundTint="#FFC300"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@android:drawable/ic_menu_add" />
+
+    <LinearLayout
+        android:id="@+id/heartLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp"
+        android:layout_marginEnd="20dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:visibility="visible"
+        app:layout_constraintBottom_toTopOf="@+id/form_fab_main"
+        app:layout_constraintRight_toRightOf="parent">
+
+    <TextView
+        android:id="@+id/heartLabelTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/border_square_black_r10"
+        android:backgroundTintMode="src_over"
+        android:gravity="center"
+        android:elevation="2dp"
+        android:padding="6dp"
+        android:text="Heart"
+        android:textColor="#000000"
+        android:typeface="normal" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/form_fab_sub1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:src="@drawable/heart"
+        android:backgroundTint="#FFF7CC"
+        app:layout_constraintBottom_toTopOf="@id/form_fab_main"
+        app:layout_constraintStart_toStartOf="@id/form_fab_main"
+        app:layout_constraintEnd_toEndOf="@id/form_fab_main"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/eyeLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_marginEnd="20dp"
+        android:layout_marginRight="30dp"
+        android:gravity="center_vertical"
+        android:visibility="visible"
+        app:layout_constraintBottom_toTopOf="@+id/heartLayout"
+        app:layout_constraintLeft_toLeftOf="@+id/heartLayout"
+        app:layout_constraintRight_toRightOf="parent">
+
+    <TextView
+        android:id="@+id/eyeLabelTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/border_square_black_r10"
+        android:gravity="center"
+        android:elevation="2dp"
+        android:padding="6dip"
+        android:text="Eye"
+        android:textColor="#000000"
+        android:typeface="normal" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/form_fab_sub2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:src="@drawable/eye"
+        android:backgroundTint="#FFEE99"
+        app:layout_constraintBottom_toTopOf="@id/form_fab_sub1"
+        app:layout_constraintStart_toStartOf="@id/form_fab_sub1"
+        app:layout_constraintEnd_toEndOf="@id/form_fab_sub1"/>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/boneLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_marginEnd="20dp"
+        android:layout_marginRight="30dp"
+        android:gravity="center_vertical"
+        android:visibility="visible"
+        app:layout_constraintBottom_toTopOf="@+id/eyeLayout"
+        app:layout_constraintLeft_toLeftOf="@+id/eyeLayout"
+        app:layout_constraintRight_toRightOf="parent">
+
+        <TextView
+            android:id="@+id/boneLabelTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/border_square_black_r10"
+            android:elevation="2dp"
+            android:gravity="center"
+            android:padding="6dp"
+            android:text="Bone"
+            android:textColor="#000000"
+            android:typeface="normal" />
+
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/form_fab_sub3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:src="@drawable/bone"
+        android:backgroundTint="#FFE266"
+        app:layout_constraintBottom_toTopOf="@id/form_fab_sub2"
+        app:layout_constraintStart_toStartOf="@id/form_fab_sub2"
+        app:layout_constraintEnd_toEndOf="@id/form_fab_sub2"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/bloodLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="20dp"
+        android:layout_marginRight="30dp"
+        android:gravity="center_vertical"
+        android:visibility="visible"
+        app:layout_constraintBottom_toTopOf="@+id/boneLayout"
+        app:layout_constraintLeft_toLeftOf="@+id/boneLayout"
+        app:layout_constraintRight_toRightOf="parent">
+
+        <TextView
+            android:id="@+id/bloodLabelTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/border_square_black_r10"
+            android:elevation="2dp"
+            android:gravity="center"
+            android:padding="6dp"
+            android:text="Blood"
+            android:textColor="#000000"
+            android:typeface="normal" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/form_fab_sub4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:src="@drawable/blood"
+        android:backgroundTint="#FFD63F"
+        app:layout_constraintBottom_toTopOf="@id/form_fab_sub3"
+        app:layout_constraintStart_toStartOf="@id/form_fab_sub3"
+        app:layout_constraintEnd_toEndOf="@id/form_fab_sub3"/>
+
+
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
